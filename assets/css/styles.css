@@ -1,0 +1,278 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, sans-serif;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.profile-picture {
+    max-height: 300px;
+}
+
+.profile-picture-row {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.rotate-45-right {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/*********************************/
+/***        Containers         ***/
+/*********************************/
+.dark-container {
+    background-color: #B5B0AC;
+    padding-top: 70px;
+}
+.light-container {
+    background-color: #F0F0F0;
+    padding-top: 70px;
+}
+.full-screen-size {
+    min-height: 100vh;
+}
+
+
+/*********************************/
+/***           Home            ***/
+/*********************************/ 
+#summaryBlock > p {
+    color: #0B333F;
+}
+
+
+/*********************************/
+/***          Navbar           ***/
+/*********************************/
+.navbar {
+    background-color: #0B333F;
+    color: #FFFFFF;
+}
+.navbar .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar .navbar-nav > li > a:hover {
+    background-color: #EEEEEE;
+    color: #0B333F;
+}
+.navbar .navbar-nav > li > a.active {
+    background-color: #EEEEEE;
+    color: #0B333F;
+}
+.navbar > button > span {
+    background-color: #FFFFFF;
+}
+.navbar .language-switch {
+    padding: 15px;
+}
+
+.flag-large {
+    width: 30px;
+}
+
+
+/*********************************/
+/***          Skills           ***/
+/*********************************/
+.skill-progress {
+    height: 24px;
+    font-size: 18px;
+}
+.skill-progress > .progress-bar-wrapper > .progress-bar {
+    background-color: #21618C;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px;
+    text-align: left;
+    font-size: 18px;
+}
+.skill-progress > i {
+    float: right;
+    margin: 3px;
+    color: #0B333F;
+}
+
+
+/*********************************/
+/***        Experience         ***/
+/*********************************/ 
+.timeline-cell {
+    border-left: 2px ridge #0B333F;
+}
+.timeline-cell-dash {
+    height: 50px;
+    border-left: 2px dotted #0B333F;
+}
+.timeline-tick {
+    width: 100%;
+    height: 1px;
+    padding: 0px;
+    border: 1px ridge #0B333F;
+}
+.job-timeline {
+    padding: 0px;
+    text-align: center;
+}
+.job-cell {
+    padding-left: 0px;
+}
+.company-cell {
+    border: 1px solid #0B333F;
+}
+.details-cell {
+    text-align: justify;
+}
+
+.details-btn {
+    margin: 0px;
+}
+
+.details-btn > i:after {
+    content: "remove";
+}
+.details-btn.collapsed > i:after {
+    content: "add";
+}
+
+/*********************************/
+/***         Carousel          ***/
+/*********************************/
+.carousel-indicators li {
+    display: none;
+}
+.portfolio-images {
+    width: 100%;
+    margin: auto;
+}
+
+/*********************************/
+/***          Panels           ***/
+/*********************************/
+.panel-custom-primary {
+    border-color: #0B333F;
+    background-color: transparent;
+}
+.panel-custom-primary > .panel-heading {
+    background: #0B333F; 
+    color: #FFFFFF;
+    border-color: #0B333F;
+}
+
+
+/*********************************/
+/***          Footer           ***/
+/*********************************/
+footer {
+    background-color: #0B333F;
+    font-size: 12px;
+    padding: 10px;
+    color: #FFFFFF;
+}
+footer .btn.btn-simple {
+    color: #FFFFFF;
+}
+footer .btn.btn-simple:hover {
+    color: #FFFFFF;
+}
+
+
+/*********************************/
+/***   Animation slide to top  ***/
+/*********************************/
+.slide-top-anim {
+    visibility: hidden;
+}
+.slide-top {
+    -webkit-animation-name: slidetop;
+    animation-name: slidetop;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    visibility: visible;
+}
+@keyframes slidetop {
+    from {opacity:0; transform:translateY(40%);}
+    to {opacity:1; transform:translateY(0%);}
+}
+@-webkit-keyframes slidetop {
+    from {opacity:0; -webkit-transform:translateY(40%);}
+    to {opacity:1; -webkit-transform:translateY(0%);}
+}
+
+
+/*********************************/
+/***  Animation slide to left  ***/
+/*********************************/
+.slide-left-anim {
+    visibility: hidden;
+}
+.slide-left {
+    -webkit-animation-name: slideleft;
+    animation-name: slideleft;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    visibility: visible;
+}
+@keyframes slideleft {
+    from {opacity:0; transform:translateX(40%);}
+    to {opacity:1; transform:translateX(0%);}
+}
+@-webkit-keyframes slideleft {
+    from {opacity:0; -webkit-transform:translateX(40%);}
+    to {opacity:1; -webkit-transform:translateX(0%);}
+}
+
+
+/*********************************/
+/***  Animation slide to right ***/
+/*********************************/
+.slide-right-anim {
+    visibility: hidden;
+}
+.slide-right {
+    -webkit-animation-name: slideright;
+    animation-name: slideright;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    visibility: visible;
+}
+@keyframes slideright {
+    from {opacity:0; transform:translateX(-40%);}
+    to {opacity:1; transform:translateX(0%);}
+}
+@-webkit-keyframes slideright {
+    from {opacity:0; -webkit-transform:translateX(-40%);}
+    to {opacity:1; -webkit-transform:translateX(0%);}
+}
+
+
+/*********************************/
+/***   Animation width grow    ***/
+/*********************************/
+.width-growth-anim {
+    visibility: hidden;
+}
+.width-growth {
+    -webkit-animation-name: widthgrowth;
+    animation-name: widthgrowth;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    visibility: visible;
+}
+@keyframes widthgrowth {
+    from {opacity:0; width:0%;}
+    to {opacity:1; width:100%;}
+}
+@-webkit-keyframes widthgrowth {
+    from {opacity:0; width:0%;}
+    to {opacity:1; width:100%;}
+}

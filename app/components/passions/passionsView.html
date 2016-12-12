@@ -1,0 +1,101 @@
+<!-- Passions -->
+<div ng-controller="PassionsCtrl">
+  <div id="passionsBlock" class="container-fluid dark-container full-screen-size">
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>{{'PASSIONS' | translate}}</h2>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <br/>
+    
+    <div class="text-left slide-top-anim">
+      <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+        
+          <!-- Travel -->
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading"><span class="glyphicon glyphicon-globe"></span> {{'TRAVELS' | translate}}</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-5">
+                  <dl>
+                    <dt>{{'EUROPE' | translate}}</dt>
+                    <div class="row">
+                      <div class="col-sm-6">
+                          <dd ng-repeat="country in countries.europe1"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                      </div>
+                      <div class="col-sm-6">
+                          <dd ng-repeat="country in countries.europe2"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                      </div>
+                    </div>
+                  </dl>
+                </div>
+                <div class="col-sm-3">
+                  <dl>
+                    <dt>{{'ASIA' | translate}}</dt>
+                    <dd ng-repeat="country in countries.asia"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                  </dl>
+                </div>
+                <div class="col-sm-2">
+                  <dl>
+                    <dt>{{'AMERICAS' | translate}}</dt>
+                    <dd ng-repeat="country in countries.america"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                  </dl>
+                </div>
+                <div class="col-sm-2">
+                  <dl>
+                    <dt>{{'AFRICA' | translate}}</dt>
+                    <dd ng-repeat="country in countries.africa"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Travel -->
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-5 col-md-offset-1">
+        
+          <!-- Sports -->
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading">{{'SPORTS' | translate}}</div>
+            <div class="panel-body">
+              <dl>
+                <div class="row">
+                  <div class="col-sm-6">
+                      <dd ng-repeat="sport in sports.normal">{{sport.name | translate}}</dd>
+                  </div>
+                  <div class="col-sm-6">
+                      <dd ng-repeat="sport in sports.snow">{{sport.name | translate}}</dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <!-- End Sports -->
+          
+        </div>
+        <div class="col-sm-6 col-md-5">
+        
+          <!-- Scuba Diving -->
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading">{{'SCUBA_DIVING' | translate}}</div>
+            <div class="panel-body">{{'AUTONOMOUS_DIVER' | translate}}</div>
+          </div>
+          <!-- End Scuba Diving -->
+          
+        </div> 
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End Passions -->

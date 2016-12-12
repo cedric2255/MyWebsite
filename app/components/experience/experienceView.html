@@ -1,0 +1,162 @@
+<!-- Experience -->
+<div ng-controller="ExperienceCtrl">
+  <div id="experienceBlock" class="container-fluid light-container full-screen-size">
+  
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>{{'EXPERIENCE' | translate}}</h2>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <br/>
+
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 timeline-cell-dash"></div>
+    </div>
+  
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 timeline-cell">
+        <div class="row vertical-center slide-left-anim" ng-repeat="job in jobs">
+          <div class="col-xs-2 col-sm-2 job-timeline">
+            <p><span class="glyphicon glyphicon-calendar"></span> {{job.beginDate | date : job.dateFormat}}<span ng-if="(job.endDate !== undefined)"> - {{job.endDate | date : job.dateFormat}}</span></p>
+            <div class="timeline-tick"></div>
+          </div>
+          <div class="col-xs-10 col-sm-10 job-cell">
+            <div class="panel-group company-cell">
+              <div class="panel panel-default">
+                <div class="panel-heading project-panel-heading">
+                  <div class="panel-title">
+                    <h5><strong>{{job.title | translate}}</strong></h5>
+                    <strong>{{job.company}}</strong>
+                    <span ng-if="(job.exCompanyName !== undefined)"> ({{'FORMERLY' | translate}} {{job.exCompanyName}})</span>
+                    <span ng-if="(job.contractingCompany !== undefined)">, {{'CONTRACTOR_AT' | translate}} <strong>{{job.contractingCompany}}</strong></span>
+                    <br/>
+                    <i class="glyphicon glyphicon-map-marker"></i> {{job.city}}, {{job.country | translate}}
+                    <br/>
+                    <br/>
+                    <button class="btn btn-primary btn-xs details-btn collapsed" data-toggle="collapse" data-target="#details-{{$index}}">
+                      <i class="material-icons"></i> {{'DETAILS' | translate}}
+                    </button>
+                  </div>
+                </div>
+                <div id="details-{{$index}}" class="panel-collapse collapse details-cell">
+                  <ul class="list-group">
+
+                    <!-- Company -->
+                    <li class="list-group-item">
+                      <strong>{{'COMPANY' | translate}}:</strong> {{job.companyDescription | translate}}
+                      <br/>
+                      <a href="{{job.companyWebsite}}" target="_blank" ng-if="(job.companyWebsite !== undefined)">
+                        <span class="label label-primary"><i class="fa fa-laptop"></i> {{'WEBSITE' | translate}}</span>
+                      </a>
+                    </li>
+                    <!-- Company -->
+                    
+                    <!-- Projects -->
+                    <li class="list-group-item">
+                      <div class="row">
+                      
+                        <!-- Projects Header -->
+                        <div class="col-sm-3">
+                          <div class="header header-primary">
+                            <ul class="nav nav-pills nav-stacked">
+                              <li>
+                                <strong>
+                                  <ng-pluralize count="job.projects.length"
+                                                when="{ '0': '{{&quot;PROJECT&quot; | translate}}', '1': '{{&quot;PROJECT&quot; | translate}}', 'other': '{{&quot;PROJECTS&quot; | translate}}' }">
+                                  </ng-pluralize>:
+                                </strong>
+                              </li>
+                              <li ng-class="{'active': $index === 0}" ng-repeat="project in job.projects">
+                                <a href="#project-{{job.id}}-{{project.id}}" data-toggle="tab">{{project.title | translate}}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- End Projects Header -->
+                        
+                        <!-- Project Details -->
+                        <div class="col-sm-9">
+                          <div class="tab-content">
+                            <div class="tab-pane fade in" ng-class="{'active': $index === 0}" ng-repeat="project in job.projects" id="project-{{job.id}}-{{project.id}}">
+                              <ul class="list-group">
+                                                              
+                                <!-- Objective -->
+                                <li class="list-group-item"><strong>{{'OBJECTIVE' | translate}}:</strong> {{project.objective | translate}}</li>
+                                <!-- End Objective -->
+
+                                <!-- Carousel -->
+                                <li class="list-group-item" ng-if="project.portfolio !== undefined">
+                                  <div uib-carousel active="0" interval="4000">
+                                    <div uib-slide ng-repeat="slide in project.portfolio track by slide.id" index="slide.id">
+                                      <img ng-srcset="{{slide.image}}" alt="{{slide.image}}" class="img-responsive portfolio-images"/>
+                                    </div>
+                                  </div>
+                                  <i class="material-icons clickable" data-toggle="modal" data-target="#portfolioModal-{{job.id}}-{{project.id}}">zoom_in</i>
+
+                                  <!-- Portfolio modal -->
+                                  <div id="portfolioModal-{{job.id}}-{{project.id}}" class="modal fade" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                      <div class="modal-content">
+                                        <div class="card card-signup">
+                                          <div class="content">
+                                            <div class="header header-primary text-center">
+                                              <div class="container-fluid">
+                                                <button type="button" class="close" data-dismiss="modal"><i class="material-icons">close</i></button>
+                                                <h5 class="modal-title">{{project.title | translate}}</h5>
+                                              </div>
+                                            </div>
+                                            <div class="modal-body">
+                                              <div uib-carousel active="0" interval="4000">
+                                                <div uib-slide ng-repeat="slide in project.portfolio track by slide.id" index="slide.id">
+                                                  <img ng-srcset="{{slide.image}}" alt="{{slide.image}}" class="img-responsive"/>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- End Portfolio modal -->
+                                  
+                                </li>
+                                <!-- End Carousel -->
+
+                                <!-- Achievements -->
+                                <li class="list-group-item">
+                                  <p><strong>{{'ACHIEVEMENTS' | translate}}:</strong></p>
+                                  <div ng-repeat="achievement in project.achievements">
+                                    <p><i class="fa fa-check-square-o text-success"></i> {{achievement | translate}}</p>
+                                  </div>
+                                </li>
+                                <!-- End Achievements -->
+                                
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Project Details -->
+                        
+                      </div>
+                    </li>
+                    <!-- End Projects -->
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 timeline-cell-dash"></div>
+    </div>
+  
+  </div>
+</div>
+<!-- End Experience -->

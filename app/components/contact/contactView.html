@@ -1,0 +1,129 @@
+<!-- Contact -->
+<div ng-controller="ContactCtrl">
+  <div id="contactBlock" class="container-fluid light-container full-screen-size">
+  
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>{{'CONTACT' | translate}}</h2>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <br/>
+    
+    <div class="row">
+      <div class="col-sm-12" align="left">
+      
+        <div class="row">
+          <!-- Contact information -->
+          <div class="col-sm-6 slide-right-anim">
+            <a href="mailto:cedric.poirot@gmail.com" target="_top">
+              <span class="badge"><i class="fa fa-at"></i> cedric.poirot@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/cepoirot" target="_blank">
+              <span class="badge"><i class="fa fa-linkedin-square"></i> LinkedIn</span>
+            </a>
+            <a href="http://www.cedricpoirot.com" target="_blank">
+              <span class="badge"><i class="fa fa-laptop"></i> {{'WEBSITE' | translate}}</span>
+            </a>
+          </div>
+          <!-- End Contact information -->
+          <div class="col-sm-6"></div>
+        </div>
+        
+        <br/>
+
+        <div class="row">
+          <!-- Contact information -->
+          <div class="col-sm-6 slide-right-anim">    
+            <div id="googleMap" style="height:250px;width:100%;"></div>
+          </div>
+          <!-- End Contact information -->
+
+          <br/>
+
+          <!-- Message to send -->
+          <div class="col-sm-6 slide-left-anim">
+            <div class="row" ng-repeat="alert in emailAlerts">
+              <div class="col-sm-12">
+                <div class="alert alert-{{alert.type}}">
+                  <div class="container-fluid">
+                    <div class="alert-icon">
+                      <i class="material-icons">{{alert.icon}}</i>
+                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                    </button>
+                    {{alert.msg | translate}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group label-floating">
+                  <label class="control-label">{{'NAME' | translate}}...</label>
+                  <input type="text" class="form-control" ng-model="contact.name" id="nameContact" required="true">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group label-floating">
+                  <label class="control-label">{{'EMAIL' | translate}}...</label>
+                  <input type="email" class="form-control" ng-model="contact.email" id="emailContact" required="true">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group label-floating">
+                  <label class="control-label">{{'CONTENT' | translate}}...</label>
+                  <textarea class="form-control" ng-model="contact.content" rows="5" required="true"></textarea>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-12">
+                <a href="" class="btn btn-simple btn-primary pull-right" ng-click="sendEmail()"><i class="fa fa-send-o"></i> {{'SEND' | translate}}</a>              
+              </div>
+            </div>
+          </div>
+          <!-- End Message to send -->
+      
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- End Contact -->
+
+
+<!-- Scripts for Google map -->
+<script type="text/javascript">
+  function initializeGoogleMap() {
+  
+    var locationPosition = {lat: 42.34297, lng: -71.1003893};
+    
+    var mapOptions = {
+      center: locationPosition,
+      zoom: 12,
+      draggable: false,
+      scrollwheel: false,
+      mapTypeControl: false,
+      streetViewControl: false
+    };
+    
+    var locationMap = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+    
+    var marker = new google.maps.Marker({
+      position: locationPosition,
+      map: locationMap
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBQbnUORIwm3TUD4o_N1nPizRmZyAFiVc&callback=initializeGoogleMap"></script>
+<!-- End Scripts for Google map -->

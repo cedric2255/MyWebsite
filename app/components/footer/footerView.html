@@ -1,0 +1,23 @@
+<!-- Footer -->
+<footer ng-controller="FooterCtrl" class="container-fluid text-center">
+
+  <!-- Link to the top -->
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="" class="btn btn-simple" ng-click="toTheTop()" du-scroll-container="main-container"> 
+        <span class="glyphicon glyphicon-chevron-up"></span> {{'TO_THE_TOP' | translate}} <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+    </div>
+  </div>
+  <!-- End Link to the top -->
+
+  <!-- Copyright -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div align="center"><span class="glyphicon glyphicon-copyright-mark"></span> {{currentYear}} www.cedricpoirot.com - Cedric Poirot - {{'ALL_RIGHTS_RESERVED' | translate}}</div>
+    </div>
+  </div>
+  <!-- End Copyright -->
+
+</footer>
+<!-- End Footer -->

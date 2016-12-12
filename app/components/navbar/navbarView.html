@@ -1,0 +1,42 @@
+<!-- Navbar -->
+<div ng-controller="NavbarCtrl">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <!-- Language switch -->
+        <ul class="nav pull-left">
+          <li class="pull-left">
+            <div class="language-switch">
+                <img class="flag-lang flag-large" ng-src="assets/img/flags/GB.png" ng-click="changeLanguage($event, 'en')" alt="English">
+                <img class="flag-lang clickable" ng-src="assets/img/flags/FR.png" ng-click="changeLanguage($event, 'fr')" alt="French">
+                <img class="flag-lang clickable" ng-src="assets/img/flags/ES.png" ng-click="changeLanguage($event, 'es')" alt="Spanish">
+            </div>
+          </li>
+        </ul>
+        <!-- End Language switch -->
+
+        <!-- Button for collapsible menu -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <i class="material-icons">menu</i>
+        </button>
+        <!-- End Button for collapsible menu -->
+      </div>
+
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#homeBlock" du-smooth-scroll du-scrollspy btn-auto-collapse><i class="material-icons">home</i> {{'HOME' | translate}}</a></li>
+          <li><a href="#skillsBlock" du-smooth-scroll du-scrollspy btn-auto-collapse><i class="material-icons rotate-45-right">assessment</i> {{'SKILLS' | translate}}</a></li>
+          <li><a href="#experienceBlock" du-smooth-scroll du-scrollspy btn-auto-collapse><i class="material-icons">timeline</i> {{'EXPERIENCE' | translate}}</a></li>
+          <li><a href="#passionsBlock" du-smooth-scroll du-scrollspy btn-auto-collapse><i class="material-icons">favorite</i> {{'PASSIONS' | translate}}</a></li>
+          <li><a href="#contactBlock" du-smooth-scroll du-scrollspy btn-auto-collapse><i class="material-icons">chat</i> {{'CONTACT' | translate}}</a></li>
+        </ul>
+      </div>
+      <!-- End Menu -->
+
+    </div>
+  </nav>
+</div>
+<!-- End Navbar -->
