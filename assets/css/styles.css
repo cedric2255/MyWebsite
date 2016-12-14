@@ -73,7 +73,12 @@ body, h1, h2, h3, h4, h5, h6 {
 .flag-large {
     width: 30px;
 }
-
+.navbar-toggle > i:after {
+    content: "close";
+}
+.navbar-toggle.collapsed > i:after {
+    content: "menu";
+}
 
 /*********************************/
 /***          Skills           ***/
