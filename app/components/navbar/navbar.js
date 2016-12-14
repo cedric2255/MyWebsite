@@ -12,7 +12,8 @@ angular.module('navbar',['pascalprecht.translate'])
     .useSanitizeValueStrategy('escapeParameters');
 }])
 
-.directive('btnAutoCollapse', closeNavbarDirective)
+.directive('btnAutoCollapse', closeNavbar)
+.directive('btnRotateIcon', rotateIcon)
 
 .controller('NavbarCtrl', ['$scope', '$rootScope', '$translate', function ($scope, $rootScope, $translate) {
 
