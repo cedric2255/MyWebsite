@@ -20,11 +20,6 @@ body, h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.rotate-45-right {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
 
 /*********************************/
 /***        Containers         ***/
@@ -266,7 +261,6 @@ footer .btn.btn-simple:hover {
     animation-name: widthgrowth;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
-    visibility: visible;
 }
 @keyframes widthgrowth {
     from {opacity:0; width:0%;}
@@ -275,4 +269,43 @@ footer .btn.btn-simple:hover {
 @-webkit-keyframes widthgrowth {
     from {opacity:0; width:0%;}
     to {opacity:1; width:100%;}
+}
+
+
+/*********************************/
+/***  Animation rotate right   ***/
+/*********************************/
+.rotate-right {
+    -webkit-animation-name: rotateright;
+    animation-name: rotateright;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    visibility: visible;
+}
+@keyframes rotateright {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(180deg);}
+}
+@-webkit-keyframes rotateright {
+    from {-webkit-transform:rotate(0deg);}
+    to {-webkit-transform:rotate(180deg);}
+}
+
+/*********************************/
+/***  Animation rotate left    ***/
+/*********************************/
+.rotate-left {
+    -webkit-animation-name: rotateleft;
+    animation-name: rotateleft;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    visibility: visible;
+}
+@keyframes rotateleft {
+    from {transform:rotate(180deg);}
+    to {transform:rotate(0deg);}
+}
+@-webkit-keyframes rotateleft {
+    from {-webkit-transform:rotate(180deg);}
+    to {-webkit-transform:rotate(0deg);}
 }
