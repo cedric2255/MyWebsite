@@ -1,157 +1,159 @@
 <!-- Skills -->
 <div ng-controller="SkillsCtrl">
-  <div id="skillsBlock" class="container-fluid dark-container full-screen-size">
-  
-    <!-- Header -->
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>{{'SKILLS' | translate}}</h2>
-      </div>
-    </div>
-    <!-- End Header -->
+  <div id="skillsBlock" class="skill-container container-fluid background-image full-screen-size">
+    <div class="container-fluid">
 
-    <br/>
-  
-    <!-- Programming Languages -->
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="panel panel-custom-primary">
-          <div class="panel-heading"><span class="glyphicon glyphicon-console"></span> {{'PROGRAMMING_LANGUAGES' | translate}}</div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-sm-6">
-              
-               <!-- Backend -->
-                <dl>
-                  <dt>{{'BACKEND' | translate}}</dt>
-                  <dd>
-                    <div class="progress skill-progress">
-                      <div class="progress-bar-wrapper width-growth-anim">
-                        <div class="progress-bar" role="progressbar" style="width:90%;padding-left:5px;" data-toggle="tooltip" data-placement="bottom" title="C++">C++</div>
-                      </div>
-                    </div>
-                  </dd>
-                  <dd ng-repeat="skill in skills.backend">
-                    <div class="progress skill-progress">
-                      <div class="progress-bar-wrapper width-growth-anim">
-                        <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
-                          <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
-                        </div>
-                      </div>
-                    </div>
-                  </dd>
-                </dl>
-               <!-- End Backend -->
+    <!-- Header -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>{{'SKILLS' | translate}}</h2>
+        </div>
+      </div>
+      <!-- End Header -->
+
+      <br/>
+    
+      <!-- Programming Languages -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading"><span class="glyphicon glyphicon-console"></span> {{'PROGRAMMING_LANGUAGES' | translate}}</div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-6">
                 
-               <!-- Database -->
-                <dl>
-                  <dt>{{'DATABASE' | translate}}</dt>
-                  <dd ng-repeat="skill in skills.database">
-                    <div class="progress skill-progress">
-                      <div class="progress-bar-wrapper width-growth-anim">
-                        <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
-                          <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                 <!-- Backend -->
+                  <dl>
+                    <dt>{{'BACKEND' | translate}}</dt>
+                    <dd>
+                      <div class="progress skill-progress">
+                        <div class="progress-bar-wrapper width-growth-anim">
+                          <div class="progress-bar" role="progressbar" style="width:90%;padding-left:5px;" data-toggle="tooltip" data-placement="bottom" title="C++">C++</div>
                         </div>
                       </div>
-                    </div>
-                  </dd>
-                </dl>
-               <!-- End Database -->
-               
-              </div>
-              
-              <div class="col-sm-6">
-              
-               <!-- Frontend -->
-                <dl>
-                  <dt>{{'FRONTEND' | translate}}</dt>
-                  <dd ng-repeat="skill in skills.frontend">
-                    <div class="progress skill-progress">
-                      <div class="progress-bar-wrapper width-growth-anim">
-                        <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
-                          <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                    </dd>
+                    <dd ng-repeat="skill in skills.backend">
+                      <div class="progress skill-progress">
+                        <div class="progress-bar-wrapper width-growth-anim">
+                          <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
+                            <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </dd>
-                </dl>
-               <!-- End Frontend -->
-               
+                    </dd>
+                  </dl>
+                 <!-- End Backend -->
+                  
+                 <!-- Database -->
+                  <dl>
+                    <dt>{{'DATABASE' | translate}}</dt>
+                    <dd ng-repeat="skill in skills.database">
+                      <div class="progress skill-progress">
+                        <div class="progress-bar-wrapper width-growth-anim">
+                          <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
+                            <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                 <!-- End Database -->
+                 
+                </div>
+                
+                <div class="col-sm-6">
+                
+                 <!-- Frontend -->
+                  <dl>
+                    <dt>{{'FRONTEND' | translate}}</dt>
+                    <dd ng-repeat="skill in skills.frontend">
+                      <div class="progress skill-progress">
+                        <div class="progress-bar-wrapper width-growth-anim">
+                          <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
+                            <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                          </div>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                 <!-- End Frontend -->
+                 
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Programming Languages -->
-    
-    <div class="row">
-    
-      <!-- Agile -->
-      <div class="col-sm-6">
-        <div class="panel panel-custom-primary">
-          <div class="panel-heading"><span class="glyphicon glyphicon-refresh"></span> Agile</div>
-          <div class="panel-body">
-            <dl>
-              <dd>
-                <div class="progress skill-progress">
-                  <div class="progress-bar-wrapper width-growth-anim">
-                    <div class="progress-bar" role="progressbar" style="width:90%" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Scrum">
-                      <i class="devicons devicons-scrum"></i> Scrum
-                    </div>
-                  </div>
-                  <i class="fa fa-certificate clickable" uib-popover-template="scrum.popover.url" popover-title="{{scrum.popover.title | translate}}"
-                     popover-trigger="'outsideClick'" popover-append-to-body="true"></i>
-                </div>
-              </dd>
-              <dd ng-repeat="skill in skills.agile">
-                <div class="progress skill-progress">
-                  <div class="progress-bar-wrapper width-growth-anim">
-                    <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" title="{{skill.name}}">
-                      <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
-                    </div>
-                  </div>
-                </div>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <!-- End Agile -->
-
-      <!-- Tools -->
-      <div class="col-sm-6">
-        <div class="panel panel-custom-primary">
-          <div class="panel-heading"><span class="glyphicon glyphicon-wrench"></span> {{'TOOLS' | translate}}</div>
-          <div class="panel-body">
-            <dl>
-              <dd ng-repeat="skill in skills.tools">
-                <div class="progress skill-progress">
-                  <div class="progress-bar-wrapper width-growth-anim">
-                    <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
-                      <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
-                    </div>
-                  </div>
-                </div>
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </div>
-      <!-- End Tools -->
+      <!-- End Programming Languages -->
       
-    </div>
-
-    <script type="text/ng-template" id="scrumCertifsPopover.html">
-      <div>
-        <div class="row" ng-repeat="certification in scrum.certifications">
-          <div class="col-sm-12">
-            <img ng-src="assets/img/{{certification.icon}}.png" alt="{{certification.icon}}" width="30px" height="30px"> <label>{{certification.name}}</label>
+      <div class="row">
+      
+        <!-- Agile -->
+        <div class="col-sm-6">
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading"><span class="glyphicon glyphicon-refresh"></span> Agile</div>
+            <div class="panel-body">
+              <dl>
+                <dd>
+                  <div class="progress skill-progress">
+                    <div class="progress-bar-wrapper width-growth-anim">
+                      <div class="progress-bar" role="progressbar" style="width:90%" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Scrum">
+                        <i class="devicons devicons-scrum"></i> Scrum
+                      </div>
+                    </div>
+                    <i class="fa fa-certificate clickable" uib-popover-template="scrum.popover.url" popover-title="{{scrum.popover.title | translate}}"
+                       popover-trigger="'outsideClick'" popover-append-to-body="true"></i>
+                  </div>
+                </dd>
+                <dd ng-repeat="skill in skills.agile">
+                  <div class="progress skill-progress">
+                    <div class="progress-bar-wrapper width-growth-anim">
+                      <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" title="{{skill.name}}">
+                        <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                      </div>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
+        <!-- End Agile -->
+
+        <!-- Tools -->
+        <div class="col-sm-6">
+          <div class="panel panel-custom-primary">
+            <div class="panel-heading"><span class="glyphicon glyphicon-wrench"></span> {{'TOOLS' | translate}}</div>
+            <div class="panel-body">
+              <dl>
+                <dd ng-repeat="skill in skills.tools">
+                  <div class="progress skill-progress">
+                    <div class="progress-bar-wrapper width-growth-anim">
+                      <div class="progress-bar" role="progressbar" style="width:{{skill.width}}" data-toggle="tooltip" data-placement="bottom" data-container="body" title="{{skill.name}}">
+                        <i class="devicons devicons-{{skill.icon}}"></i> {{skill.name}}
+                      </div>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!-- End Tools -->
+        
       </div>
-    </script>
+
+      <script type="text/ng-template" id="scrumCertifsPopover.html">
+        <div>
+          <div class="row" ng-repeat="certification in scrum.certifications">
+            <div class="col-sm-12">
+              <img ng-src="assets/img/{{certification.icon}}.png" alt="{{certification.icon}}" width="30px" height="30px"> <label>{{certification.name}}</label>
+            </div>
+          </div>
+        </div>
+      </script>
     
+    </div>
   </div>
 </div>
 <!-- End Skills -->
