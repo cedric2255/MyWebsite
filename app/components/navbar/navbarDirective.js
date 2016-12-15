@@ -4,6 +4,7 @@ var closeNavbar = function() {
         element.on('click', function(event) {
             if( $(event.target).is('a') ) {
                 $(".navbar-collapse.in").collapse('hide');
+                $(".menu-toggle").removeClass("rotate-right").addClass("rotate-left");
             }
         });
     }
@@ -22,12 +23,12 @@ var rotateIcon = function() {
 
     function link(scope, element, attrs) {
         element.on('click', function(event) {
-            if( $(event.currentTarget).is('button') ) {
-                if ($(event.currentTarget.childNodes[1]).hasClass("rotate-right")) {
-                    $(event.currentTarget.childNodes[1]).removeClass("rotate-right").addClass("rotate-left");
+            if( $(event.currentTarget).hasClass("navbar-toggle") ) {
+                if ($(".menu-toggle").hasClass("rotate-right")) {
+                    $(".menu-toggle").removeClass("rotate-right").addClass("rotate-left");
                 }
                 else {
-                    $(event.currentTarget.childNodes[1]).removeClass("rotate-left").addClass("rotate-right");
+                    $(".menu-toggle").removeClass("rotate-left").addClass("rotate-right");
                 }
             }
         });
