@@ -98,23 +98,16 @@
                                     <i class="material-icons clickable" data-toggle="modal" data-target="#portfolioModal-{{job.id}}-{{project.id}}">zoom_in</i>
 
                                     <!-- Portfolio modal -->
-                                    <div id="portfolioModal-{{job.id}}-{{project.id}}" class="modal fade" role="dialog">
-                                      <div class="modal-dialog modal-lg">
+                                    <div id="portfolioModal-{{job.id}}-{{project.id}}" class="modal fade modal-portfolio" role="dialog">
+                                      <div class="modal-dialog">
                                         <div class="modal-content">
-                                          <div class="card card-signup">
-                                            <div class="content">
-                                              <div class="header header-primary text-center">
-                                                <div class="container-fluid">
-                                                  <button type="button" class="close" data-dismiss="modal"><i class="material-icons">close</i></button>
-                                                  <h5 class="modal-title">{{project.title | translate}}</h5>
-                                                </div>
-                                              </div>
-                                              <div class="modal-body">
-                                                <div uib-carousel active="0" interval="4000">
-                                                  <div uib-slide ng-repeat="slide in project.portfolio track by slide.id" index="slide.id">
-                                                    <img ng-srcset="{{slide.image}}" alt="{{slide.image}}" class="img-responsive"/>
-                                                  </div>
-                                                </div>
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><i class="material-icons">close</i></button>
+                                          </div>
+                                          <div class="modal-body">
+                                            <div uib-carousel active="0" interval="4000">
+                                              <div uib-slide ng-repeat="slide in project.portfolio track by slide.id" index="slide.id">
+                                                <img ng-srcset="{{slide.image}}" alt="{{slide.image}}" class="img-responsive"/>
                                               </div>
                                             </div>
                                           </div>
