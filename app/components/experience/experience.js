@@ -78,19 +78,19 @@ angular.module('experience',[])
                             'id': 0
                         },
                         {
-                            'image': 'assets/img/swimboost/connection.jpg',
+                            'image': 'assets/img/swimboost/contact.jpg',
                             'id': 1
                         },
                         {
-                            'image': 'assets/img/swimboost/contact.jpg',
+                            'image': 'assets/img/swimboost/team_auto.jpg',
                             'id': 2
                         },
                         {
-                            'image': 'assets/img/swimboost/team_auto.jpg',
+                            'image': 'assets/img/swimboost/result_auto.jpg',
                             'id': 3
                         },
                         {
-                            'image': 'assets/img/swimboost/result_auto.jpg',
+                            'image': 'assets/img/swimboost/connection.jpg',
                             'id': 4
                         }
                     ],
@@ -167,5 +167,11 @@ angular.module('experience',[])
 .controller('ExperienceCtrl', ['$scope', 'jobs', function ($scope, jobs) {
 
     $scope.jobs = jobs;
+    
+    $scope.activeSlide = 0;
+    
+    $scope.changeActiveSlide = function(newActiveSlide) {
+        $scope.activeSlide = newActiveSlide;
+    };
 
 }]);

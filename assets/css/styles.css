@@ -142,16 +142,26 @@ body, h1, h2, h3, h4, h5, h6 {
 .details-cell {
     text-align: justify;
 }
-
 .details-btn {
     margin: 0px;
 }
-
 .details-btn > i:after {
     content: "remove";
 }
 .details-btn.collapsed > i:after {
     content: "add";
+}
+.portfolio-thumbnail-col {
+    padding: 5px;
+}
+.portfolio-thumbnail-col-last {
+    position: relative;
+    text-align: center;
+    vertical-align: center;
+}
+.portfolio-length { 
+   position: absolute; 
+   width: 100%;  
 }
 .modal-portfolio {
     left: 0;
@@ -166,14 +176,6 @@ body, h1, h2, h3, h4, h5, h6 {
     padding: 10px;
     width: 100%;
     vertical-align: middle;
-}
-
-
-/*********************************/
-/***         Carousel          ***/
-/*********************************/
-.carousel-indicators li {
-    display: none;
 }
 .portfolio-images {
     width: 100%;
