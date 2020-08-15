@@ -19,14 +19,6 @@ angular.module('navbar',['pascalprecht.translate'])
 
     $scope.changeLanguage = function(event, langKey) {
         $translate.use(langKey);
-        
-        // All flag images
-        $('.flag-lang').removeClass("flag-large");
-        $('.flag-lang').addClass("clickable");
-
-        // Current flag image
-        angular.element(event.target).removeClass("clickable");
-        angular.element(event.target).addClass("flag-large");
     };
 
     $rootScope.$on('$translateChangeSuccess', function(event, data) {

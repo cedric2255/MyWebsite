@@ -1,7 +1,6 @@
-angular.module('passions',[])
+angular.module('passions',['ng-countryflags'])
 
 .factory('countries', function () {
-
     var countries = {
         europe1:[],
         europe2:[],
@@ -10,7 +9,7 @@ angular.module('passions',[])
         africa:[]
     };
     
-    // Europe countries
+    // European countries
     countries.europe1 = [
         {name:'BELGIUM', code:'BE'},
         {name:'CZECH_REPUBLIC', code:'CZ'},
@@ -27,13 +26,17 @@ angular.module('passions',[])
     ];
     // American countries
     countries.america = [
+        {name:'BELIZE', code:'BZ'},
         {name:'BRAZIL', code:'BR'},
         {name:'CANADA', code:'CA'},
+        {name:'ECUADOR', code:'EC'},
+        {name:'MEXICO', code:'MX'},
         {name:'USA', code:'US'}
     ];
     // Asian countries
     countries.asia = [
         {name:'INDONESIA', code:'ID'},
+        {name:'OMAN', code:'OM'},
         {name:'THAILAND', code:'TH'}
     ];
     // African countries
@@ -45,12 +48,12 @@ angular.module('passions',[])
 })
 
 .factory('sports', function () {
-
     var sports = {normal:[], snowSports:{}};
 
     // Sports
     sports.normal = [
         {name:'SWIMMING'},
+        {name:'ROCK_CLIMBING'},
         {name:'BASKETBALL'}
     ];
     sports.snow = [
@@ -62,9 +65,6 @@ angular.module('passions',[])
 })
 
 .controller('PassionsCtrl', ['$scope', 'countries', 'sports', function ($scope, countries, sports) {
-
     $scope.countries = countries;
-
     $scope.sports = sports;
-
 }]);

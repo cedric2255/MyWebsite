@@ -2,36 +2,49 @@ angular.module('skills',[])
 
 .factory('skillsList', function () {
 
-    var skills = {backend:[], frontend:[], database:[], agile:[], tools:[]};
-    
-    skills.backend = [
-        {name:'C#', icon:'dotnet', width:'65%'},
-        {name:'Java', icon:'java', width:'50%'}
-    ];
+  var projectManagement = {certifications:[], tools:[]};
+  var agile = {certifications:[], tools:[]};
+  var programming = {backend:[], frontend:[], database:[], tools:[]};
+  var skills = {projectManagement, agile, programming};
 
-    skills.frontend = [
-        {name:'Javascript', icon:'javascript_badge', width:'80%'},
-        {name:'Bootstrap', icon:'bootstrap', width:'80%'},
-        {name:'Angular', icon:'angular', width:'65%'},
-        {name:'HTML', icon:'html5', width:'65%'},
-        {name:'CSS', icon:'css3', width:'50%'}
-    ];
+  // Project Management
+  skills.projectManagement.certifications = [
+    {name:'Project Management Professional', icon:'PMP'}
+  ];
+  skills.projectManagement.tools = [
+    {name:'MS Project', width:'90%'},
+    {name:'Confluence', iconClass:'devicon-confluence-plain', width:'90%'}
+  ];
 
-    skills.database = [
-        {name:'SQL', icon:'database', width:'70%'}
-    ];
+  // Agile
+  skills.agile.certifications = [
+    {name:'Professional Scrum Master I', icon:'PSMI'},
+    {name:'Certified Scrum Product Owner', icon:'CSPO'}
+  ];
+  skills.agile.tools = [
+    {name:'Jira', iconClass:'devicons devicons-jira', width:'90%'}
+  ];
 
-    skills.agile = [
-        {name:'Jira', icon:'jira', width:'65%'}
-    ];
+  // Programming Languages
+  skills.programming.backend = [
+    {name:'Java', iconClass:'devicon-java-plain', width:'90%'},
+    {name:'C++', iconClass:'devicon-cplusplus-plain', width:'90%'}
+  ];
+  skills.programming.frontend = [
+    {name:'Bootstrap', iconClass:'devicon-bootstrap-plain', width:'80%'},
+    {name:'Angular', iconClass:'devicon-angularjs-plain', width:'65%'},
+    {name:'HTML', iconClass:'devicon-html5-plain', width:'65%'},
+    {name:'CSS', iconClass:'devicon-css3-plain', width:'50%'}
+  ];
+  skills.programming.database = [
+    {name:'SQL', iconClass:'devicons devicons-database', width:'70%'}
+  ];
+  skills.programming.tools = [
+    {name:'Bitbucket', iconClass:'devicon-bitbucket-plain', width:'90%'},
+    {name:'Eclipse', iconClass:'devicons devicons-eclipse', width:'80%'}
+  ];
 
-    skills.tools = [
-        {name:'Git', icon:'git', width:'80%'},
-        {name:'Eclipse', icon:'eclipse', width:'75%'},
-        {name:'Visual Studio', icon:'visualstudio', width:'70%'}
-    ];
-    
-    return skills;
+  return skills;
 })
 
 .factory('scrum', function () {

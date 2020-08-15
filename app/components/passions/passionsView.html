@@ -27,10 +27,14 @@
                       <dt>{{'EUROPE' | translate}}</dt>
                       <div class="row">
                         <div class="col-sm-6">
-                            <dd ng-repeat="country in countries.europe1"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                            <dd ng-repeat="country in countries.europe1">
+                              <countryflag country="{{country.code}}"> {{country.name | translate}}</countryflag>
+                            </dd>
                         </div>
                         <div class="col-sm-6">
-                            <dd ng-repeat="country in countries.europe2"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                            <dd ng-repeat="country in countries.europe2">
+                              <countryflag country="{{country.code}}"> {{country.name | translate}}</countryflag>
+                            </dd>
                         </div>
                       </div>
                     </dl>
@@ -38,19 +42,25 @@
                   <div class="col-sm-3">
                     <dl>
                       <dt>{{'ASIA' | translate}}</dt>
-                      <dd ng-repeat="country in countries.asia"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                      <dd ng-repeat="country in countries.asia">
+                        <countryflag country="{{country.code}}"> {{country.name | translate}}</countryflag>
+                      </dd>
                     </dl>
                   </div>
                   <div class="col-sm-2">
                     <dl>
                       <dt>{{'AMERICAS' | translate}}</dt>
-                      <dd ng-repeat="country in countries.america"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                      <dd ng-repeat="country in countries.america">
+                        <countryflag country="{{country.code}}"> {{country.name | translate}}</countryflag>
+                      </dd>
                     </dl>
                   </div>
                   <div class="col-sm-2">
                     <dl>
                       <dt>{{'AFRICA' | translate}}</dt>
-                      <dd ng-repeat="country in countries.africa"><img ng-src="assets/img/flags/{{country.code}}.png" alt="{{country.code}}" width="23px" height="17px"> {{country.name | translate}}</dd>
+                      <dd ng-repeat="country in countries.africa">
+                        <countryflag country="{{country.code}}"> {{country.name | translate}}</countryflag>
+                      </dd>
                     </dl>
                   </div>
                 </div>

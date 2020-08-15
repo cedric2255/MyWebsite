@@ -5,7 +5,44 @@ angular.module('experience',[])
     var jobs = [
         {
             id: "amadeus",
-            title: "JOB_TITLE_SOFTWARE_ING_SCRUM_MASTER",
+            title: "JOB_TITLE_SENIOR_SOFTWARE_ENGINEER_SCRUM_MASTER",
+            company: "AMADEUS North America",
+            city: "Boston",
+            country: "USA",
+            beginDate: new Date(2017, 0, 1, 0, 0, 0, 0),
+            endDate: 'CURRENT',
+            dateFormat: "MMM yyyy",
+            companyDescription: "COMPANY_DESCRIPTION_AMADEUS",
+            companyWebsite: "http://www.amadeus.com",
+            projects: [
+                {
+                    id: "Southwest",
+                    title: "PROJECT_MANAGEMENT",
+                    objective: "OBJECTIVE_SOUTHWEST",
+                    achievements: [
+                        "ACHIEVEMENTS_BUDGET_COST_MANAGEMENT",
+                        "ACHIEVEMENTS_RISK_MANAGEMENT",
+                        "ACHIEVEMENTS_SCOPE_TIME_INTEGRATION_QUALITY_MANAGEMENT"
+                    ]
+                },
+                {
+                    id: "flight_search_shopping",
+                    title: "FLIGHT_SEARCH_SHOPPING_PLATFORM",
+                    objective: "OBJECTIVE_AMADEUS_SHOPPING",
+                    achievements: [
+                        "ACHIEVEMENTS_DESIGN_DEV_BACKEND",
+                        "ACHIEVEMENTS_PRIORITIZATION",
+                        "ACHIEVEMENTS_COLLABORATE_ALL",
+                        "ACHIEVEMENTS_PERFECT_JAVA_SPRING",
+                        "ACHIEVEMENTS_IMPROVE_SWAGGER_HIBERNATE"
+                    ]
+                }
+            ]
+        },
+
+        {
+            id: "thales_services",
+            title: "JOB_TITLE_SOFTWARE_ENGINEER_SCRUM_MASTER",
             company: "THALES Services",
             contractingCompany: "AMADEUS",
             city: "Sophia-Antipolis",
@@ -27,7 +64,7 @@ angular.module('experience',[])
                         "ACHIEVEMENTS_PRIORITIZATION",
                         "ACHIEVEMENTS_COLLABORATE_ALL",
                         "ACHIEVEMENTS_PERFECT_CPP_SQL",
-                        "ACHIEVEMENTS_PERFECT_JS_HTML_CSS",
+                        "ACHIEVEMENTS_PERFECT_JS_HTML_CSS"
                     ]
                 },
                 {
@@ -38,7 +75,7 @@ angular.module('experience',[])
                         "ACHIEVEMENTS_EXPERT_DESIGN_DEV_BACKEND",
                         "ACHIEVEMENTS_PRIORITIZATION",
                         "ACHIEVEMENTS_COLLABORATE_ALL",
-                        "ACHIEVEMENTS_PERFECT_CPP_SQL",
+                        "ACHIEVEMENTS_PERFECT_CPP_SQL"
                     ]
                 },
                 {
@@ -51,12 +88,12 @@ angular.module('experience',[])
                         "ACHIEVEMENTS_PRIORITIZATION",
                         "ACHIEVEMENTS_COLLABORATE_ALL",
                         "ACHIEVEMENTS_PERFECT_CPP_SQL",
-                        "ACHIEVEMENTS_PERFECT_JS_HTML_CSS",
+                        "ACHIEVEMENTS_PERFECT_JS_HTML_CSS"
                     ]
                 }
             ]
         },
-    
+
         {
             id: "cns_vallauris",
             title: "JOB_TITLE_SOFTWARE_DEVELOPER_VOLUNTEER",
@@ -105,7 +142,7 @@ angular.module('experience',[])
         },
 
         {
-            id: "thales_com",
+            id: "thales_communications",
             title: "JOB_TITLE_SOFTWARE_DEVELOPER_INTERN",
             company: "THALES Communications & Security",
             city: "Colombes",
@@ -130,7 +167,7 @@ angular.module('experience',[])
                 }
             ]
         },
-    
+
         {
             id: "airbus",
             title: "JOB_TITLE_SOFTWARE_DEVELOPER_INTERN",
@@ -160,7 +197,7 @@ angular.module('experience',[])
             ]
         }
     ];
-    
+
     return jobs;
 })
 

@@ -21,7 +21,11 @@
         <div class="col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 timeline-cell">
           <div class="row vertical-center slide-left-anim" ng-repeat="job in jobs">
             <div class="col-xs-2 col-sm-2 job-timeline">
-              <p><span class="glyphicon glyphicon-calendar"></span> {{job.beginDate | date : job.dateFormat}}<span ng-if="(job.endDate !== undefined)"> - {{job.endDate | date : job.dateFormat}}</span></p>
+              <p>
+                <span class="glyphicon glyphicon-calendar"></span> {{job.beginDate | date : job.dateFormat}}
+                <span ng-if="(job.endDate !== undefined && job.endDate !== 'CURRENT')"> - {{job.endDate | date : job.dateFormat}}</span>
+                <span ng-if="(job.endDate === 'CURRENT')"> - ...</span>
+              </p>
               <div class="timeline-tick"></div>
             </div>
             <div class="col-xs-10 col-sm-10 job-cell">
